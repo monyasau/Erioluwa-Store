@@ -8,8 +8,8 @@ const Footer = () => {
                         Stay Updated on Latest Product Releases
                     </h1>
                     <div className="md:flex font-trajan gap-4 py-16 text-white/80">
-                        <input type="email" className="capitalize  w-full bg-[#292929] text-white px-8 py-4 mb-4 rounded-full md:w-[70%]" placeholder="ENTER YOUR EMAIL" />
-                        <button className=" bg-[#292929] w-full md:w-fit py-4 px-10 rounded-full">SUBSCRIBE</button>
+                        <input type="email" className="capitalize  w-full bg-[#292929] text-white px-8 py-4 md:py-6 mb-4 rounded-full md:w-[70%]" placeholder="ENTER YOUR EMAIL" />
+                        <button className=" bg-[#3D3D3D] w-full md:w-fit py-4 px-10 rounded-full">SUBSCRIBE</button>
                     </div>
                 </div>
                 <div className="gap-x-4 md:gap-0 flex-row flex justify-between mx-auto md:m-0 md:pl-[50%] font-trajan h-full">
