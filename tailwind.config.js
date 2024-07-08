@@ -9,7 +9,11 @@ export default {
     extend: {
       colors:{
         primary: "#070707",
-      }
+      },
+      fontFamily: {
+        trajan: ['TrajanPro', 'sans-serif'],
+        cabinet: ['CabinetGrotesk', 'sans-serif'],
+      },
     },
   },
   plugins: [],
