@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: url("./assets/CabinetGrotesk.otf") format("opentype");
+}
+*{
+    font-family: "Cabinet Grotesk";
+}
