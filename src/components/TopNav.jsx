@@ -8,7 +8,7 @@ const [dropDownActive, setDropDownActive] = useState(false)
 
             <div className="max-w-screen-xl text-primary py-16 px-6 md:px-0 mx-auto flex justify-between items-center">
                 <h1 className="text-[30px] font-bold">
-                    Erioluwa Store
+                Oxford Brogues
                 </h1>
                 <div className="md:flex gap-16 items-center font-bold text-[20px] hidden">
                     <a href="#">Home</a>
