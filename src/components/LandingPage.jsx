@@ -7,8 +7,8 @@ const LandingPage = () => {
     return (
         <>
 
-            <div className="w-full pt-[70px] md:pt-[150px] " >
-                <div className="max-w-screen-xl mx-auto min-h-screen rounded-3xl items-center flex p-20" style={{ background: "url(" + mainImage + ")", backgroundSize: "cover" }}>
+            <div className="w-full pt-[70px] px-2 md:px-0  md:pt-[150px] " >
+                <div className="max-w-screen-xl mx-auto min-h-screen md:rounded-3xl items-center flex py-24 px-2 md:p-20" style={{ background: "url(" + mainImage + ")", backgroundSize: "cover" }}>
                     <div className="h-fit w-[80%]">
                         <h1 className="text-6xl font-trajan text-white ">
                             Discover Timeless & Elegant Luxury Men's Brogues
@@ -26,7 +26,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="max-w-screen-xl mx-auto  mt-16">
-                    <h1 className="text-[80px] font-trajan">
+                    <h1 className="md:text-[80px] text-[40px] font-trajan">
                         featured products
                     </h1>
                     <div className="grid md:grid-cols-3 gap-8">
