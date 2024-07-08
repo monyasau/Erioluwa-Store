@@ -14,7 +14,6 @@ const [dropDownActive, setDropDownActive] = useState(false)
                     <a href="#">Home</a>
                     <a href="#">Cart</a>
                     <a href="#">Support</a>
-                    <a href="#">FAQs</a>
                 </div>
                 <div className="md:hidden" aria-label='dropdown button'>
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +22,7 @@ const [dropDownActive, setDropDownActive] = useState(false)
                         <path d="M4 19H20" stroke="#005DA1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </div>
-                <div className='absolute  backdrop-blur-sm w-full h-full top-0 left-0'>
+                <div className='absolute  backdrop-blur-sm md:hidden w-full h-full top-0 left-0'>
                     dnnddn
                 </div>
             </div>
