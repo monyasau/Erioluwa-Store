@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<LandingPage cart={cart} setCart={setCart} />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="/support" element={<Support />} />
-          <Route path="/Checkout" element={<CheckOutCard />} />
+          <Route path="/checkout" element={<CheckOutCard />} />
   
         </Routes>
         <Footer />

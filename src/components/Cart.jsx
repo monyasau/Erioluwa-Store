@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { Link } from 'react-router-dom';
 import product1 from "../assets/product1.jpg";
 import product2 from "../assets/product2.jpg";
 import product3 from "../assets/product3.jpg";
-import CheckOutCard from "./CheckOutCard";
 
 const products = [
     { id: 0, name: "OXFORD BROWN", price: "192,000", image: product1 },
@@ -74,7 +73,7 @@ const Cart = ({ cart, setCart }) => {
 
                         <p>Total</p> <p className="">₦{total}</p>
                     </div>
-                    <button onClick={()=>setCheckout(true)} className="w-full text-xl font-bold bg-black text-white py-4 rounded-full">Proceed to checkout</button>
+                    <Link to="/checkout" className="w-full cursor-pointer text-center text-xl font-bold bg-black text-white py-4 rounded-full">Proceed to checkout</Link>
                     <button className="w-full text-xl font-bold border border-black my-4 py-4 rounded-full">Cancel</button>
 
                 </div>}
