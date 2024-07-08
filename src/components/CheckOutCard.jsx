@@ -1,6 +1,6 @@
 const CheckOutCard=()=> {
     return (
-        <div className="w-full absolute h-full bg-black/50  right-0">
+        <div className="w-full absolute min-h-screen bg-black/50  right-0">
 
         <div className="w-60% mx-auto">
         
