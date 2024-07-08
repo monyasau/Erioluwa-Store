@@ -3,20 +3,21 @@ import product2 from "../assets/product2.jpg"
 import product3 from "../assets/product3.jpg"
 import mainImage from "../assets/mainBgImage.png";
 import Product from "./Product";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const LandingPage = () => {
-    const [ storeData, setStoreData]=useState({item:[]});
-    const getStoreData = async() => {
-       try{ let storeDataJson = await fetch('https://api.timbu.cloud/products?organization_id=5bb659916aee437b8412792912d9afa3&Appid=USHSWJX32OABUZO&Apikey=0a5daa9b59734f82acba94d3612db9d720240708223219662140&reverse_sort=false&page=1&size=6');
-        let data = await storeDataJson;
-        setStoreData(data)}
-        catch (error) {
-            console.log("An error has occured",error)
-        }
-    }
-    useEffect(() => {
-        getStoreData()
-    }, []);
+    // const [ storeData, setStoreData]=useState({item:[]});
+    // const getStoreData = async() => {
+    //    try{ let storeDataJson = await fetch('https://api.timbu.cloud/products?organization_id=5bb659916aee437b8412792912d9afa3&Appid=USHSWJX32OABUZO&Apikey=0a5daa9b59734f82acba94d3612db9d720240708223219662140&reverse_sort=false&page=1&size=6').then((response) => response.json());
+    //     let data = await storeDataJson;
+    //     setStoreData(data)}
+    //     catch (error) {
+    //         console.log("An error has occured",error)
+    //     }
+    // }
+    // useEffect(() => {
+    //     getStoreData()
+    // }, []);
+    
     return (
         <>
 
@@ -43,9 +44,15 @@ const LandingPage = () => {
                         featured products
                     </h1>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {storeData.item.map((product) => (
+                        {/* {storeData.item.map((product) => (
                             <Product key={product.id} name={product.name} price={product.price} image={product.image} />
-                        ))}
+                        ))} */}
+                        <Product name={"OXFORD BROWN"} price={"192,000"} image={product1} addToCart={null}/>
+                        <Product name={"OXFORD black"} price={"320,000"} image={product2} />
+                        <Product name={"Italian Black"} price={"106,000"} image={product3} />
+                        <Product name={"OXFORD BROWN"} price={"192,000"} image={product1} />
+                        <Product name={"OXFORD black"} price={"320,000"} image={product2} />
+                        <Product name={"Italian Black"} price={"106,000"} image={product3} />
                     </div>
                 </div>
             </div>
