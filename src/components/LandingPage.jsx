@@ -7,25 +7,25 @@ const LandingPage = () => {
     return (
         <>
 
-            <div className="w-full pt-[70px] px-2 md:px-0  md:pt-[150px] " >
-                <div className="max-w-screen-xl mx-auto min-h-screen md:rounded-3xl items-center flex py-24 px-2 md:p-20" style={{ background: "url(" + mainImage + ")", backgroundSize: "cover" }}>
-                    <div className="h-fit w-[80%]">
-                        <h1 className="text-6xl font-trajan text-white ">
+            <div className="w-full md:px-0  md:pt-[150px] " >
+                <div className="max-w-screen-xl px-2 mx-auto min-h-screen md:rounded-3xl items-center flex py-24 px-2 md:p-20" style={{ background: "url(" + mainImage + ")", backgroundSize: "cover" }}>
+                    <div className="h-fit md:w-[80%]">
+                        <h1 className="text-6xl font-trajan py-6 md:py-0 text-white ">
                             Discover Timeless & Elegant Luxury Men's Brogues
                         </h1>
                         <div className="font-bold font-cabinet">
 
-                            <p className="text-white w-[45%] py-12 text-xl">
+                            <p className="text-white w-full md:w-[45%] py-12 text-xl">
                                 Our exclusive collection of executive men’s brogues, crafted to elevate your style effortlessly.
                             </p>
-                            <div className="flex   gap-4">
-                                <button className="bg-white py-4 px-8 rounded-full">Browse products</button>
-                                <button className="border-white border text-white py-4 px-8 rounded-full">About us</button>
+                            <div className="w-full md:w-fit gap-4 md:flex">
+                                <button className="bg-white py-4 w-full md:w-fit px-8 rounded-full">Browse products</button>
+                                <button className="border-white border w-full my-4 md:my-0 md:w-fit text-white py-4 px-8 rounded-full">About us</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="max-w-screen-xl mx-auto  mt-16">
+                <div className="max-w-screen-xl mx-auto  mt-16  px-2">
                     <h1 className="md:text-[80px] text-[40px] font-trajan">
                         featured products
                     </h1>

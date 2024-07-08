@@ -4,9 +4,9 @@ const TopNav = () => {
     const [dropDownActive, setDropDownActive] = useState(false)
 
     return (
-        <div className="w-full font-cabinet absolute top-[10px] md:top-0 ">
+        <div className="w-full font-cabinet absolute border ">
 
-            <div className="max-w-screen-xl text-primary py-16 px-6 md:px-0 mx-auto flex justify-between items-center">
+            <div className="max-w-screen-xl text-white md:text-primary py-4 md:py-16 px-2 md:px-0 mx-auto flex justify-between items-center">
                 <h1 className="text-[30px] font-bold">
                     Oxford Brogues
                 </h1>
