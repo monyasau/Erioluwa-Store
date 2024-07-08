@@ -3,7 +3,20 @@ import product2 from "../assets/product2.jpg"
 import product3 from "../assets/product3.jpg"
 import mainImage from "../assets/mainBgImage.png";
 import Product from "./Product";
+import { useEffect, useState } from "react";
 const LandingPage = () => {
+    const [ storeData, setStoreData]=useState({item:[]});
+    const getStoreData = async() => {
+       try{ let storeDataJson = await fetch('https://api.timbu.cloud/products?organization_id=5bb659916aee437b8412792912d9afa3&Appid=USHSWJX32OABUZO&Apikey=0a5daa9b59734f82acba94d3612db9d720240708223219662140&reverse_sort=false&page=1&size=6');
+        let data = await storeDataJson;
+        setStoreData(data)}
+        catch (error) {
+            console.log("An error has occured",error)
+        }
+    }
+    useEffect(() => {
+        getStoreData()
+    }, []);
     return (
         <>
 
