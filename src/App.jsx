@@ -1,21 +1,27 @@
-import { useState } from 'react'
-import TopNav from './components/TopNav'
-import LandingPage from './components/LandingPage'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import Cart from './components/Cart';
+import Support from './components/Support';
+import TopNav from './components/TopNav';
+import LandingPage from './components/LandingPage';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([]);
 
   return (
-    <>
-      <div className="" style={{background: "linear-gradient(180deg, #FCFCFC 0%, #EAEAEA 100%)"}}>
-
+    <Router>
+      <div className="" style={{ background: "linear-gradient(180deg, #FCFCFC 0%, #EAEAEA 100%)" }}>
         <TopNav />
-        <LandingPage />
+        <Routes>
+          <Route path="/" element={<LandingPage cart={cart} setCart={setCart} />} />
+          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+          <Route path="/support" element={<Support />} />
+        </Routes>
         <Footer />
       </div>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
