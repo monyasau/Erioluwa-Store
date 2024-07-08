@@ -8,9 +8,12 @@ function App() {
 
   return (
     <>
-    <TopNav/>
-    <LandingPage/>
-    <Footer/>
+      <div className="px-6 xl:p-0">
+
+        <TopNav />
+        <LandingPage />
+        <Footer />
+      </div>
     </>
   )
 }
