@@ -18,7 +18,7 @@ const Cart = ({ cart, setCart }) => {
     const removeFromCart = (id) => {
         setCart((prevCart) => prevCart.filter((item) => item !== id));
     };
-    let subTotal = 25000 * cart.length * Math.round(Math.random() * 22);
+    let subTotal = 15000 * cart.length * Math.round(Math.random() * 22);
     let deliveryFee = Math.round(subTotal * 0.05)
     let total = subTotal + deliveryFee;
 
