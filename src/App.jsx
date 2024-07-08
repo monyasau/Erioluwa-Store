@@ -5,6 +5,7 @@ import Support from './components/Support';
 import TopNav from './components/TopNav';
 import LandingPage from './components/LandingPage';
 import Footer from './components/Footer';
+import CheckOutCard from './components/CheckOutCard';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -17,6 +18,8 @@ function App() {
           <Route path="/" element={<LandingPage cart={cart} setCart={setCart} />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/Checkout" element={<CheckOutCard />} />
+  
         </Routes>
         <Footer />
       </div>

@@ -1,6 +1,8 @@
+import { useState } from "react";
 import product1 from "../assets/product1.jpg";
 import product2 from "../assets/product2.jpg";
 import product3 from "../assets/product3.jpg";
+import CheckOutCard from "./CheckOutCard";
 
 const products = [
     { id: 0, name: "OXFORD BROWN", price: "192,000", image: product1 },
@@ -12,11 +14,12 @@ const products = [
 ];
 
 const Cart = ({ cart, setCart }) => {
+    
 
     const removeFromCart = (id) => {
         setCart((prevCart) => prevCart.filter((item) => item !== id));
     };
-    let subTotal = 10000 * cart.length * Math.round(Math.random() * 12);
+    let subTotal = 15000 * cart.length * Math.round(Math.random() * 22);
     let deliveryFee = Math.round(subTotal * 0.05)
     let total = subTotal + deliveryFee;
 
@@ -58,7 +61,7 @@ const Cart = ({ cart, setCart }) => {
                         })
                     )}
                 </div>
-                <div className="flex flex-col font-cabinet justify-center md:w-[32%]">
+               {cart.length > 0 && <div className="flex flex-col font-cabinet justify-center w-full md:w-[32%]">
                     <div className="flex justify-between my-4">
                         <p>Sub-Total</p><p className="text-[#787878]">₦{subTotal}</p>
                     </div>
@@ -71,10 +74,10 @@ const Cart = ({ cart, setCart }) => {
 
                         <p>Total</p> <p className="">₦{total}</p>
                     </div>
-                    <button className="w-full text-xl font-bold bg-black text-white py-4 rounded-full">Proceed to checkout</button>
+                    <button onClick={()=>setCheckout(true)} className="w-full text-xl font-bold bg-black text-white py-4 rounded-full">Proceed to checkout</button>
                     <button className="w-full text-xl font-bold border border-black my-4 py-4 rounded-full">Cancel</button>
 
-                </div>
+                </div>}
             </div>
         </div>
     );
