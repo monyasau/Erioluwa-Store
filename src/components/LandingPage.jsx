@@ -43,12 +43,9 @@ const LandingPage = () => {
                         featured products
                     </h1>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD black"} price={320000} image={product2} />
-                        <Product name={"Italian Black"} price={106000} image={product3} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD black"} price={320000} image={product2} />
-                        <Product name={"Italian Black"} price={106000} image={product3} />
+                        {storeData.item.map((product) => (
+                            <Product key={product.id} name={product.name} price={product.price} image={product.image} />
+                        ))}
                     </div>
                 </div>
             </div>
