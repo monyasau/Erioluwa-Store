@@ -4,7 +4,7 @@ const TopNav = () => {
     const [dropDownActive, setDropDownActive] = useState(false)
 
     return (
-        <div className="w-full font-cabinet absolute border ">
+        <div className="w-full font-cabinet absolute border md:border-none ">
 
             <div className="max-w-screen-xl text-white md:text-primary py-4 md:py-16 px-2 md:px-0 mx-auto flex justify-between items-center">
                 <h1 className="text-[30px] font-bold">
