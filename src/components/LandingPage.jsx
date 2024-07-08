@@ -6,7 +6,7 @@ import Product from "./Product";
 const LandingPage = () => {
     return (
         <>
-            <div className="w-full ">
+            <div className="w-full " style={{background: "linear-gradient(180deg, #FCFCFC 0%, #EAEAEA 100%)"}}>
                 <div className="max-w-screen-xl mx-auto h-screen rounded-3xl items-center flex p-20" style={{ background: "url(" + mainImage + ")", backgroundSize: "cover" }}>
                     <div className="h-fit w-[80%]">
                         <h1 className="text-6xl font-trajan text-white drop-shadow-xl">
@@ -30,18 +30,11 @@ const LandingPage = () => {
                     </h1>
                     <div className="grid grid-cols-3 gap-8">
                         <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product2} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product3} />
+                        <Product name={"OXFORD black"} price={320000} image={product2} />
+                        <Product name={"Italian Black"} price={106000} image={product3} />
                         <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product2} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product3} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product2} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product3} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product1} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product2} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product3} />
-                        <Product name={"OXFORD BROWN"} price={192000} image={product1} />
+                        <Product name={"OXFORD black"} price={320000} image={product2} />
+                        <Product name={"Italian Black"} price={106000} image={product3} />
                     </div>
                 </div>
             </div>
