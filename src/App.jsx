@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="px-6 xl:p-0">
+      <div className="px-6 xl:p-0" style={{background: "linear-gradient(180deg, #FCFCFC 0%, #EAEAEA 100%)"}}>
 
         <TopNav />
         <LandingPage />
