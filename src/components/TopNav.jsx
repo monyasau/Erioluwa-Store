@@ -6,7 +6,7 @@ const TopNav = () => {
 
     return (
         <>
-            <div className="w-full font-cabinet z-20 fixed md:px-2 lg:px-0 md:absolute top-10">
+            <div className="w-full font-cabinet  z-20 fixed md:px-2 lg:px-0 md:absolute top-10">
                 <div className="max-w-screen-xl text-white backdrop-blur-3xl md:backdrop-blur-none md:bg-transparent mx-4 bg-white/10 rounded-lg md:text-primary py-4 md:py-16 px-2 md:px-0 md:mx-auto flex justify-between items-center">
                     <h1 className="text-[30px] font-bold">
                         Oxford Brogues

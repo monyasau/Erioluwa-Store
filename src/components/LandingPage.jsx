@@ -48,7 +48,7 @@ const LandingPage = ({ cart, setCart }) => {
                             <Product key={product.id} id={product.id} name={product.name} cart={cart} setCart={setCart} price={product.price} image={product.image} />
                         ))}
                     </div>
-                    {cart.length>0 &&<Link className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart</Link>}
+                    {cart.length>0 &&<Link to="/cart" className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart</Link>}
                 </div>
             </div>
         </>
