@@ -14,7 +14,7 @@ const TopNav = () => {
                     <div className="md:flex gap-16 items-center font-bold text-[20px] hidden">
                         <Link to="/">Home</Link>
                         <Link to="/cart">Cart</Link>
-                        <Link to="/support">Support</Link>
+                        <Link to="/">Support</Link>
                     </div>
                     <div className="md:hidden" aria-label="dropdown button" onClick={() => setDropDownActive(!dropDownActive)}>
                         {dropDownActive ? 
@@ -34,7 +34,7 @@ const TopNav = () => {
                 <div className="flex gap-16 flex-col items-center font-bold text-3xl text-white font-cabinet py-[35vh]">
                     <Link to="/" onClick={() => setDropDownActive(false)}>Home</Link>
                     <Link to="/cart" onClick={() => setDropDownActive(false)}>Cart</Link>
-                    <Link to="/support" onClick={() => setDropDownActive(false)}>Support</Link>
+                    <Link to="/" onClick={() => setDropDownActive(false)}>Support</Link>
                 </div>
             </div>
         </>
