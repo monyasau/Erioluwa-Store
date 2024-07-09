@@ -69,6 +69,7 @@ const Cart = ({ cart, setCart }) => {
 
                         <p>Delivery fees</p><p className="text-[#787878]">₦{deliveryFee}</p>
                     </div>
+                    <hr />
                     <div className="flex text-2xl justify-between my-4">
 
                         <p>Total</p> <p className="">₦{total}</p>

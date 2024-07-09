@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div className="w-full px-2 md:px-0 bg-[#121212] py-16">
 
-            <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 capitalize justify-center items-center">
+            <div className="max-w-screen-xl mx-auto  md:px-2 lg:px-0 grid md:grid-cols-2 capitalize justify-center items-center">
                 <div>
                     <h1 className="text-4xl font-trajan text-white">
                         Stay Updated on Latest Product Releases
