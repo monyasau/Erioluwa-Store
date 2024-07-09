@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 
 const CheckOutCard = () => {
     const [orderSuccess, setOrderSuccess] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
     return (
         <div className="w-full md:px-0 pt-[80px] bg-black/30 md:bg-transparent min-h-screen md:pt-[180px]">
             <div className="max-w-screen-xl mx-auto md:rounded-3xl items-center flex flex-wrap py-20 px-2 md:px-0">
                 <div className="md:w-[50%] rounded-[50px] shadow-sm bg-white p-10 md:p-20  mx-auto">
 
-                    {orderSuccess ? <div className="mx-auto my-20 flex justify-center gap-4 items-center flex-col">
+                    {orderSuccess ? <div className="mx-auto text-center my-20 flex justify-center gap-4 items-center flex-col">
                         <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" fill="none">
                             <path d="M56 1.75C26.0385 1.75 1.75 26.0385 1.75 56C1.75 85.9615 26.0385 110.25 56 110.25C85.9615 110.25 110.25 85.9615 110.25 56C110.25 26.0385 85.9615 1.75 56 1.75ZM56 12.25C80.1789 12.25 99.75 31.8174 99.75 56C99.75 80.1789 80.1826 99.75 56 99.75C31.8211 99.75 12.25 80.1826 12.25 56C12.25 31.8211 31.8174 12.25 56 12.25ZM86.6696 40.7459L81.7399 35.7763C80.719 34.7471 79.0569 34.7403 78.0277 35.7615L47.1069 66.4337L34.0274 53.2481C33.0065 52.2189 31.3445 52.2121 30.3153 53.233L25.3455 58.1628C24.3162 59.1837 24.3095 60.8457 25.3306 61.8752L45.1889 81.8943C46.2098 82.9235 47.8719 82.9303 48.9011 81.9092L86.655 44.4583C87.684 43.4372 87.6905 41.7751 86.6696 40.7459Z" fill="black" />
                         </svg>
-                        <h1 className='text-4xl font-bold font-cabinet'>Order Successful</h1>
+                        <h1 className='text-4xl  font-bold font-cabinet'>Order Successful</h1>
                         <h1 className='mt-16 text-3xl font-bold font-cabinet'>Rate your experience</h1>
                         <div className="flex gap-x-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none">
@@ -37,7 +38,9 @@ const CheckOutCard = () => {
                                 <path d="M20.8538 15.0841L24.9924 11.8547C25.197 11.6838 25.5661 11.4117 25.2708 11.1016C25.0367 10.8569 24.4039 11.2092 24.4039 11.2092L20.7821 12.6246C19.7021 12.9979 18.9849 13.5506 18.9216 14.2467C18.8393 15.1748 19.6725 15.8899 20.8538 15.0841Z" fill="#F4B400" />
                             </svg>
                         </div>
-                        <button className='py-4 px-12 bg-black text-white text-xl font-bold font-cabinet rounded-full'>Submit</button>
+                       {submitted?
+                       <button className='py-4 px-12 bg-green-400 text-white text-xl font-bold font-cabinet rounded-full'>Successfully Submitted</button>
+                       : <button onClick={() => setSubmitted(true)} className='py-4 px-12 bg-black text-white text-xl font-bold font-cabinet rounded-full'>Submit</button>}
                     </div>
                         : <>
                             <h1 className="text-2xl my-4 font-cabinet text-center font-bold">Choose Payment Method</h1>
