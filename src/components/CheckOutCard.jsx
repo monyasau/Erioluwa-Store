@@ -7,7 +7,7 @@ const CheckOutCard = () => {
     return (
         <div className="w-full md:px-0 pt-[80px] bg-black/30 md:bg-transparent min-h-screen md:pt-[180px]">
             <div className="max-w-screen-xl mx-auto md:rounded-3xl items-center flex flex-wrap py-20 px-2 md:px-0">
-                <div className="md:w-[50%] rounded-[50px] shadow-sm bg-white p-10 md:p-20  mx-auto">
+                <div className="md:w-[75%] lg:w-[50%] rounded-[50px] shadow-sm bg-white p-10 md:p-20  mx-auto">
                 <div className="text-5xl gap-4 mx-auto md:m-0 w-full md:w-fit my-8 font-bold font-trajan">
                     <Link to={"/"} className='' >
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" fill="none" className=''>
