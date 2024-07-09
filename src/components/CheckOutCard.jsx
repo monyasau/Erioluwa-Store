@@ -8,7 +8,13 @@ const CheckOutCard = () => {
         <div className="w-full md:px-0 pt-[80px] bg-black/30 md:bg-transparent min-h-screen md:pt-[180px]">
             <div className="max-w-screen-xl mx-auto md:rounded-3xl items-center flex flex-wrap py-20 px-2 md:px-0">
                 <div className="md:w-[50%] rounded-[50px] shadow-sm bg-white p-10 md:p-20  mx-auto">
-
+                <div className="text-5xl gap-4 mx-auto md:m-0 w-full md:w-fit my-8 font-bold font-trajan">
+                    <Link to={"/"} className='' >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" fill="none" className=''>
+                    <path d="M11.6797 1L2.61256 9.8215C2.04159 10.377 1.75602 10.6548 1.75602 11C1.75602 11.3452 2.04159 11.623 2.61256 12.1785L11.6797 21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                    </Link>
+                </div>
                     {orderSuccess ? <div className="mx-auto text-center my-20 flex justify-center gap-4 items-center flex-col">
                         <svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" fill="none">
                             <path d="M56 1.75C26.0385 1.75 1.75 26.0385 1.75 56C1.75 85.9615 26.0385 110.25 56 110.25C85.9615 110.25 110.25 85.9615 110.25 56C110.25 26.0385 85.9615 1.75 56 1.75ZM56 12.25C80.1789 12.25 99.75 31.8174 99.75 56C99.75 80.1789 80.1826 99.75 56 99.75C31.8211 99.75 12.25 80.1826 12.25 56C12.25 31.8211 31.8174 12.25 56 12.25ZM86.6696 40.7459L81.7399 35.7763C80.719 34.7471 79.0569 34.7403 78.0277 35.7615L47.1069 66.4337L34.0274 53.2481C33.0065 52.2189 31.3445 52.2121 30.3153 53.233L25.3455 58.1628C24.3162 59.1837 24.3095 60.8457 25.3306 61.8752L45.1889 81.8943C46.2098 82.9235 47.8719 82.9303 48.9011 81.9092L86.655 44.4583C87.684 43.4372 87.6905 41.7751 86.6696 40.7459Z" fill="black" />
