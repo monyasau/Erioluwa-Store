@@ -29,7 +29,7 @@ const Product = ({ productData, setCart, cart }) => {
             </div>
             {productData.photos && productData.photos[0] ?
             (
-                <img src={`https://api.timbu.cloud/images/${productData.photos[0].url}`} className="  border rounded-2xl md:h-[420px]" alt="" />
+                <img src={`https://api.timbu.cloud/images/${productData.photos[0].url}`} className="  border rounded-2xl w-full md:w-fit h-[420px]" alt="" />
             ):
             null
             }
