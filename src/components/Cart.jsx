@@ -12,7 +12,7 @@ const products = [
     { id: 5, name: "ITALIAN BLACK", price: "106,000", image: product3 }
 ];
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart,storeData, setCart }) => {
 
 
     const removeFromCart = (id) => {
@@ -46,13 +46,13 @@ const Cart = ({ cart, setCart }) => {
                         <p className="text-red-900 text-2xl">Your cart is currently empty. Try adding some items.</p>
                     ) : (
                         cart.map((itemId) => {
-                            const product = products.find((product) => product.id === itemId);
+                            const product = storeData.items.find((product) => product.id === itemId);
                             return (
                                 <div key={product.id} className="rounded-lg">
-                                    <img src={product.image} className="rounded-2xl md:h-[420px]" alt={product.name} />
+                                    <img src={`https://api.timbu.cloud/images/${product.photos[0].url}`}  className="rounded-2xl md:h-[420px]" alt={product.name} />
                                     <div aria-label="info" className="flex text-2xl justify-between my-4">
                                         <h1 className="font-trajan capitalize">{product.name}</h1>
-                                        <p className="font-cabinet text-[#787878]">₦{product.price}</p>
+                                        <p className="font-cabinet text-[#787878]">₦{product.current_price[0].NGN}</p>
                                     </div>
                                     <div
                                         onClick={() => removeFromCart(product.id)}
