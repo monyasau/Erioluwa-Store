@@ -7,14 +7,35 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const LandingPage = ({ cart, setCart }) => {
-    let products = [
-        { id: 0, name: "OXFORD BROWN", price: "192,000", image: product1 },
-        { id: 1, name: "OXFORD BLACK", price: "320,000", image: product2 },
-        { id: 2, name: "ITALIAN BLACK", price: "106,000", image: product3 },
-        { id: 3, name: "OXFORD BROWN", price: "192,000", image: product1 },
-        { id: 4, name: "OXFORD BLACK", price: "320,000", image: product2 },
-        { id: 5, name: "ITALIAN BLACK", price: "106,000", image: product3 }
-    ];
+    // let products = [
+    //     { id: 0, name: "OXFORD BROWN", price: "192,000", image: product1 },
+    //     { id: 1, name: "OXFORD BLACK", price: "320,000", image: product2 },
+    //     { id: 2, name: "ITALIAN BLACK", price: "106,000", image: product3 },
+    //     { id: 3, name: "OXFORD BROWN", price: "192,000", image: product1 },
+    //     { id: 4, name: "OXFORD BLACK", price: "320,000", image: product2 },
+    //     { id: 5, name: "ITALIAN BLACK", price: "106,000", image: product3 }
+    // ];
+    const [storeData, setStoreData] = useState({ items: [] })
+    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(true)
+    const getStoreData = async () => {
+        try {
+            setLoading(true)
+            let storeDataJson = await fetch("https://api.timbu.cloud/products?organization_id=efb41d80c2ce475e99da9d6969d80b00&Appid=7CSHHT7SXR1YU1M&Apikey=17c8df1d199e4e7e8b236954b1956c2820240713084144770801&reverse_sort=false&page=1&size=30").then((response) => response.json());
+            const data = await storeDataJson;
+            setStoreData(data);
+            setError(false)
+            setLoading(false)
+        }
+        catch (error) {
+            console.log(error);
+            setError(true)
+            setLoading(false)
+        }
+    }
+    useEffect(() => {
+        getStoreData();
+    }, []);
 
     useEffect(() => {
         console.log("Cart updated:", cart);
@@ -44,7 +65,7 @@ const LandingPage = ({ cart, setCart }) => {
                         featured products
                     </h1>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {products.map((product) => (
+                        {storeData.items.map((product) => (
                             <Product key={product.id} id={product.id} name={product.name} cart={cart} setCart={setCart} price={product.price} image={product.image} />
                         ))}
                     </div>
