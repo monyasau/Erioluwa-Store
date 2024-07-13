@@ -24,6 +24,7 @@ const LandingPage = ({ cart, setCart, storeData }) => {
 
     return (
         <>
+        
             <div className="w-full md:px-0 md:pt-[180px]">
                 <div className="max-w-screen-xl mx-auto min-h-screen md:rounded-3xl items-center flex py-40 px-2 md:p-20" style={{ background: `url(${mainImage})`, backgroundSize: "cover" }}>
                     <div className="h-fit md:w-[80%]">
@@ -45,13 +46,13 @@ const LandingPage = ({ cart, setCart, storeData }) => {
                     <h1 className="md:text-[80px] text-[40px] font-trajan" id="products">
                         featured products
                     </h1>
-                    {cart.length>0 &&<Link to="/cart" className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart</Link>}
+                    {cart.length>0 &&<Link to="/cart" className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart <span className="text-[16px]">{cart.length}</span></Link>}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {storeData.items.map((product) => (
                             <Product key={product.id} cart={cart} setCart={setCart} productData={product} />
                         ))}
                     </div>
-                    {cart.length>0 &&<Link to="/cart" className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart</Link>}
+                    {cart.length>0 &&<Link to="/cart" className="text-3xl block py-2 px-4 rounded-xl mb-4 hover:bg-black/20 hover:border-[#eee] cursor-pointer font-cabinet text-center md:w-fit border border-red-600">View Cart <span className="text-[16px]">{cart.length}</span></Link>}
                 </div>
             </div>
         </>
